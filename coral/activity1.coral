@@ -1,0 +1,36 @@
+Function StepsToCalories(integer numSteps) returns float caloriesTotal
+   float stepsPerMinute
+   float calPerMinuteWalking
+   float minutesTotal
+   
+   // Typical adult
+   stepsPerMinute = 70.0
+   
+   // Typical adult
+   calPerMinuteWalking = 3.5
+   
+   minutesTotal = numSteps / stepsPerMinute
+   caloriesTotal = minutesTotal * calPerMinuteWalking
+   
+Function StepsToMiles(integer numSteps) returns float milesTotal
+   float feetPerStep
+   float feetPerMile
+   
+   feetPerMile = 5280
+   
+   // Typical adult
+   feetPerStep = 2.5
+   
+   milesTotal = numSteps * feetPerStep * (1.0 / feetPerMile)
+   
+Function Main() returns nothing
+   integer stepsWalked
+   stepsWalked = Get next input
+   
+   Put "Miles walked: " to output
+   Put StepsToMiles(stepsWalked) to output
+   Put "\n" to output
+   Put "Calories " to output
+   Put StepsToCalories(stepsWalked) to output
+   Put "\n" to output
+   

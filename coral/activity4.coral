@@ -1,0 +1,25 @@
+Function CircleArea(float circleDiameter) returns float circleArea
+   float circleRadius
+   float piVal
+   piVal = 3.14159265
+   circleRadius = circleDiameter / 2.0
+   circleArea = piVal * circleRadius * circleRadius
+   
+Function Main() returns nothing
+   float pizzaDiameter1
+   float pizzaDiameter2
+   float totalPizzaArea
+   float circleArea1
+   float circleArea2
+   
+   pizzaDiameter1 = 12.0  
+   circleArea1 = CircleArea(pizzaDiameter1)
+   
+   pizzaDiameter2 = 14.0
+   circleArea2 = CircleArea(pizzaDiameter2)
+   
+   totalPizzaArea = circleArea1 + circleArea2
+   
+   Put "A 12 and 14 inch pizza has " to output
+   Put totalPizzaArea to output
+   Put " inches squared combined. " to output

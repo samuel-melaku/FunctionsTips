@@ -1,0 +1,31 @@
+integer stepsWalked
+float feetPerStep
+integer feetPerMile
+float stepsPerMinute
+float calPerMinuteWalking
+float minutesTotal
+float caloriesTotal
+float milesWalked
+
+feetPerMile = 5280
+
+// Typical adult
+feetPerStep = 2.5
+
+// Typical adult 
+stepsPerMinute = 70.0
+
+// Typical adultcalPerMinuteWalking = 3.5
+
+stepsWalked = Get next input
+milesWalked = stepsWalked * feetPerStep * (1.0 / feetPerMile)
+
+Put "Miles walked " to output
+Put milesWalked to output
+Put "\n" to output
+minutesTotal = stepsWalked / stepsPerMinute
+caloriesTotal = minutesTotal * calPerMinuteWalking
+
+Put "Calories: " to output
+Put caloriesTotal to output
+Put "\n" to output
